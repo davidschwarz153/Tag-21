@@ -1,0 +1,122 @@
+@import "glo";
+@import "var";
+@import "mix";
+
+header {
+  background-image: url(../img/back1.png);
+  @include bgSize;
+  height: 800px;
+  position: relative;
+
+  & nav {
+    padding: 30px 25px;
+    @include displayFlex;
+    justify-content: space-between;
+
+    .burg {
+      @include displayFlex;
+      height: 2vh;
+      width: 2vw;
+      background: none;
+      border: none;
+      background-image: url(../img/Link.png);
+      background-size: cover;
+      cursor: pointer;
+      &:hover {
+        height: 2.2vh;
+        width: 2.2vw;
+        transition: 700ms;
+      }
+    }
+  }
+
+  & section {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    @include displayFlex;
+    flex-direction: column;
+  }
+}
+
+.one {
+  height: 743px;
+  margin: 60px 137px;
+
+  .onea {
+    margin-bottom: 60px;
+
+    & button {
+      @include btn;
+      &:hover {
+        background-color: rgba(240, 248, 255);
+        color: rgba(0, 0, 0, 0.5);
+        transition: 400ms linear;
+        border-color: rgba(0, 0, 0, 0.1);
+      }
+    }
+    .our {
+      @include displayFlex;
+      justify-content: space-between;
+
+      & h3 {
+        margin-bottom: 16px;
+      }
+    }
+  }
+
+  .pics {
+    @include displayFlex;
+
+    .con {
+      display: grid;
+      gap: 30px;
+      grid-template-columns: repeat(3, 1fr);
+      & img {
+        box-shadow: 0px 0px 1px;
+        @include imgSize(100%, 15vh);
+      }
+    }
+  }
+}
+
+.container {
+  position: relative;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 92%;
+
+  transition: background 0.5s ease;
+}
+
+.container:hover .overlay {
+  background: rgba(186, 186, 186, 0.148);
+}
+
+.button {
+  position: relative;
+  bottom: 120px;
+  text-align: center;
+  opacity: 0;
+  transition: opacity 0.35s ease;
+}
+
+.button a {
+  width: 200px;
+  padding: 12px 48px;
+  text-align: center;
+  font-weight: bold;
+  color: rgb(251, 249, 241);
+  border: solid 2px white;
+  z-index: 1;
+}
+
+.container:hover .button {
+  opacity: 1;
+}

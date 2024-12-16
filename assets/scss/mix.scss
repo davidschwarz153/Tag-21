@@ -1,0 +1,38 @@
+@mixin lOut {
+    padding: generalPadding;
+    background-color: $black;
+    color: $white;
+}
+
+@mixin imgSize($width, $height){
+    width: $width;
+    height: $height;
+    object-fit: cover;
+}
+
+@mixin bgSize{
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+}
+
+@mixin displayFlex{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin btn{
+    display: flex;
+    width: 96.64px;
+    height: 46px;
+    padding: 12px 16.8px 13px 17px;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    border: 1px solid #3A4F52;
+    cursor: pointer;
+
+
+    
+}
